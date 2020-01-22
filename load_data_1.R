@@ -12,6 +12,8 @@
 # Library to read in Excel files
 library(xlsx)
 
+library(dplyr)
+
 #baseline_directory<-"~/Bristol/R for CEA/R data dive Belfast 2020/NMA data project"
 #setwd(baseline_directory)
 
@@ -19,7 +21,7 @@ library(xlsx)
 source("mtm_networkplot_fun.R")
 
 # Load ICL data
-icl_data<-read.xlsx("SSI ICL data 20Jan2020.xlsx",sheetIndex=2)
+icl_data<-read.xlsx("SSI ICL data 20Jan2020.xlsx",sheetIndex=1)
 
 tr <- icl_data[, c("t1.class", "t2.class")]
 rownames(icl_data) <- icl_data[,"Study.ID"]
