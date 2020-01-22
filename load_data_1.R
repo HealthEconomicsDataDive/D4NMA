@@ -21,6 +21,9 @@ source("mtm_networkplot_fun.R")
 # Load ICL data
 icl_data<-read.xlsx("SSI ICL data 20Jan2020.xlsx",sheetIndex=2)
 
+tr <- icl_data[, c("t1.class", "t2.class")]
+rownames(icl_data) <- icl_data[,"Study.ID"]
+
 # Here will be exported the formatted data
 bugs_data <- list()
 
