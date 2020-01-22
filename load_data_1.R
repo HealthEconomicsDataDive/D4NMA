@@ -12,14 +12,14 @@
 # Library to read in Excel files
 library(xlsx)
 
-baseline_directory<-"~/Bristol/R for CEA/R data dive Belfast 2020/NMA data project"
-setwd(baseline_directory)
+#baseline_directory<-"~/Bristol/R for CEA/R data dive Belfast 2020/NMA data project"
+#setwd(baseline_directory)
 
 # A bonus would be draw a network plot
-source("mtm_network_plot_fun.R")
+source("mtm_networkplot_fun.R")
 
 # Load ICL data
-icl_data<-read.xlsx(paste(baseline_directory,"/SSI ICL data 20Jan2020.xlsx",sep=""),sheetIndex=2)
+icl_data<-read.xlsx("SSI ICL data 20Jan2020.xlsx",sheetIndex=2)
 
 # Here will be exported the formatted data
 bugs_data <- list()
